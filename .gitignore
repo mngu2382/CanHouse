@@ -1,5 +1,5 @@
 *.swp
 *~
 
-data/+
-figures/+
+data/*
+figures/*
