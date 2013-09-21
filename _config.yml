@@ -1,6 +1,6 @@
 name: Canberra House Prices
 pygments: true
-baseurl: "/canhouse"
+baseurl: "/CanHouse"
 permalink: none
 
 # Custom variables
