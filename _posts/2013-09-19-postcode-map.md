@@ -20,3 +20,6 @@ _The complete code for this post is
 ##### R packages
 - `maptools` (which requires `sp`) is used to read the shapefiles.
 - `RColorBrewer` provides the colour palatte.
+
+##### TODO
+Need to figure out the best way to add a scale to the map.
