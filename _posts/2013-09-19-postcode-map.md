@@ -7,7 +7,7 @@ category: misc
 _The complete code for this post is
 [here](https://github.com/mngu2382/CanHouse/blob/master/90-PostcodeMap.R)._
 
-!["Suburbs of northern Canberra"]({{ site.url }}/images/postcodemap.png "Suburbs of northern Canberra")
+!["Suburbs of northern Canberra"]({{ site.baseurl }}/images/postcodemap.png "Suburbs of northern Canberra")
 
 ##### Data
 - Suburb boundaries for the ACT in the form of shapefiles can be found
