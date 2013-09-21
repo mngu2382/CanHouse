@@ -8,14 +8,13 @@ _The complete code for this post is
 [here](https://github.com/mngu2382/CanHouse/blob/master/00-PriceData.R)._
 
 Pricing data is sourced from [domain.com.au](TODO)
-which has available records of property sales dating back to 1990.
-The "Sales History" table displays up to 20 records at a time.
+which has records of property sales dating back to 1990. The "Sales
+History" table displays up to 20 records at a time.
 
-Using `curl` we can get the content of the table, though there is a
-limit of how many you can get with one request (not sure how many, I'm
-sticking with 20). For example, the following grabs the 20 latest
-property sales with a postcode of 2602 _(thanks goes to my housemate,
-MT, for helping me figure this one out)_:
+Using `curl` we can get directly at the content of the table. There is
+a limit to how many records you can request per post, I'm not sure how
+many, I'm sticking with 20. _(Thanks goes to my housemate, MT, for
+helping me figure this one out)_:
 
 {% highlight bash %}
 curl -H "Content-Type: multipart/form-data" -X POST \
@@ -26,8 +25,10 @@ curl -H "Content-Type: multipart/form-data" -X POST \
        http://apm.domain.com.au/AJAX/Research/SalesHistory.aspx
 {% endhighlight %}
 
-This returns the html markup of the table. Extracting the data from
-the html, we end up with the following data frame:
+This returns the html markup of the table of the 20 most recent
+recorded sales of properties with postcode 2602 (i.e. with
+`postcodeId=141`). Extracting the data from the html, we end up with
+the following data frame:
 
 {% highlight r %}
 head(dat)
