@@ -1,0 +1,223 @@
+/*
+	Name: Smashing HTML5
+	Date: July 2009
+	Description: Sample layout for HTML5 and CSS3 goodness.
+	Version: 1.0
+	License: MIT <http://opensource.org/licenses/MIT>
+	Licensed by: Smashing Media GmbH <http://www.smashingmagazine.com/>
+	Original author: Enrique Ramírez <http://enrique-ramirez.com/>
+*/
+
+/* Imports */
+@import url("reset.css");
+@import url("pygment.css");
+/*
+@import url("typogrify.css");
+@import url(//fonts.googleapis.com/css?family=Yanone+Kaffeesatz&subset=latin);
+*/
+
+body {
+    background: #f5f4f3;
+    color: #000;
+    font-size: 90%; /* Base font size: 14px */
+    font-family: "helvetica neue",calibri,arial,sans-serif;
+    line-height: 1.7;
+    max-width: 660px;
+    min-width: 300px;
+    margin: 0 auto;
+    padding: 0 10px;
+    text-align: left;
+}
+
+h1 {font-size: 2em }
+h2 {font-size: 1.571em}	/* 22px */
+h3 {font-size: 1.429em}	/* 20px */
+h4 {font-size: 1.286em}	/* 18px */
+h5 {font-size: 1.143em}	/* 16px */
+h6 {font-size: 1em}     /* 14px */
+
+h1, h2, h3, h4, h5, h6 {
+    color:#d32;
+    font-weight: bold;
+    line-height: 1.1;
+    margin: 0.8em 0 0.5em;
+}
+
+section, article, aside, footer, header, nav, hgroup {
+    display: block;
+}
+
+section, aside {
+	background: #fff;
+	margin-bottom: 1em;
+	overflow: hidden;
+	padding: 10px 15px;
+}
+
+strong {
+    font-weight: bold;
+}
+em {
+    font-style: italic;
+}
+
+#banner h1 {
+    font-family: serif;
+    font-size: 3.571em;
+    white-space: nowrap;
+    margin: 0;
+}
+
+#banner h1 a:link, #banner h1 a:visited {
+	color: #111;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#banner h1 a:hover, #banner h1 a:active {
+	color: #d32;
+}
+
+#banner h1 strong {
+    font-size: 0.36em;
+    font-weight: normal;
+}
+
+#banner nav {
+	background: #111;
+    clear:both;
+	font-size: 1.143em;
+	height: 40px;
+	line-height: 30px;
+	margin-bottom: 1em;
+	text-align: center;
+}
+
+#banner nav ul {
+    list-style: none;
+    margin: 0 auto;
+}
+
+#banner nav li {
+    float: left;
+    display: inline;
+    margin: 0;
+}
+
+#banner nav a:link, #banner nav a:visited {
+	color: #fff;
+	display: inline-block;
+	height: 30px;
+	padding: 5px 10px;
+	text-decoration: none;
+}
+
+#banner nav a:hover, #banner nav a:active,
+#banner nav .active a:link, #banner nav .active a:visited {
+	background: #d32;
+	color: #fff;
+	text-shadow: none !important;
+}
+
+footer {
+    color: #333;
+    font-size: 0.8em;
+    text-align: right;
+}
+
+img {
+    display: block;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    width: auto;
+}
+
+a {
+    outline: 10px;
+    color: #d32;
+    text-decoration: none;
+}
+
+a:link, a:visited {
+    padding: 0 1px;
+}
+
+a:visited {
+    color: #b76;
+}
+
+a:hover, a:active {
+    text-decoration: underline;
+}
+
+code, pre  {
+    color: #222;
+    background-color: #fbfbfb;
+    border: 1px solid #ccc;
+    font-family: Inconsolata,Menlo,Monaco,Consolas,"Courier New",monospace;
+    font-size: 95%;
+    padding: 2px 4px;
+}
+
+code {
+    white-space: nowrap;
+}
+
+pre {
+    display: block;
+    line-height: 1.2;
+    margin: 2px 0 10px;
+    overflow:auto;
+    white-space: pre;
+}
+/*
+pre.prettyprint {
+    margin-bottom: 20px;
+}
+*/
+pre code {
+    background-color: transparent;
+    border: 0;
+    color: inherit;
+    padding: 0;
+    white-space: pre;
+}
+
+p {
+    margin-bottom: .8em;
+}
+
+ol, ul {
+    list-style-position: outside;
+    margin-left: 20px;
+}
+ol {
+    list-style-type: decimal;
+}
+ul {
+    list-style-type: disc;
+}
+
+blockquote {
+    margin: 0 60px;
+    color: #333;
+    font-size: .95em;
+    font-style: italic;   
+}
+
+table {
+    margin: 0 auto;
+    font-size: 90%;
+}
+thead, tbody {
+    border:1px solid #000;
+}
+th, td {
+    padding: 0.1em 0.5em;
+}
+
+#aside-content ul {
+    list-style: none;
+}

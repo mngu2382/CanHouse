@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>SICP: {{ page.title }}</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{{ site.baseurl }}/favicon.ico"/>
+    
+    {% if page.mathjax %}
+      {% include mathjax.html %}
+    {% endif %}
+  </head>
+  
+  <body>
+    <header id="banner">
+      <h1><a href="/">:testSite <strong>a work in progress</strong></a></h1>
+      <nav><ul>
+        <li><a href="{{ site.baseurl }}/index.html">{{ site.name }}</a></li>
+      </ul></nav>
+    </header>
+
+    <section>
+      {{ content }}
+    </section>
+
+    <aside id="aside-content">
+    {% if site.cat_list %}
+      {% for cat in site.cat_list %}
+        <h4>{{ cat[1] }}</h4>
+        <ul>
+          {% for post in site.posts reversed %}
+            {% if post.categories[0] == cat[0] %}
+              {% if page.title == post.title %}
+                <li><a href="{{ site.baseurl }}{{ post.url }}"><strong>{{ post.title }}</strong></a></li>
+              {% else %}
+                <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        </ul>
+      {% endfor %}
+    {% else %}
+      <ul>
+        {% for post in site.posts reversed %}
+          {% if page.title == post.title %}
+            <li><a href="{{ site.baseurl }}{{ post.url }}"><strong>{{ post.title }}</strong></a></li>
+          {% else %}
+            <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    {% endif %}
+    </aside>
+
+    <footer>
+        Hosted on <a href="http://github.com/">GitHub</a>, powered
+        by <a href="http://jekyllrb.com">Jekyll</a>.
+    </footer>
+  </body>
+</html>

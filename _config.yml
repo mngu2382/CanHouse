@@ -1,0 +1,6 @@
+name: Canberra House Prices
+pygments: true
+baseurl: "/canhouse"
+permalink: none
+
+# Custom variables
