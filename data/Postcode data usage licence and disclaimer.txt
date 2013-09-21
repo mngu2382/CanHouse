@@ -1,0 +1,36 @@
+
+########################################################
+##Postcode Data Usage Licence and Disclaimer Agreement##
+########################################################
+
+DISCLAIMER
+-----------
+In compiling the information Australia Post has used its best endeavours to ensure that the information is correct and current at the time of publication, but takes no responsibility for any error or defect therein. Australia Post shall not be liable for any loss or damage arising from the use of, or reliance placed on, any information provided by it. 
+
+LICENCE
+-----------
+Parts of the information contained herein have been reproduced with Australia Post's permission from Australia Post's PCODE databases. The contents of these publications and databases remain at all times the property of Australia Post and shall not be reproduced without Australia Post's permission.
+
+Australia Post grants you a limited, revocable, non-exclusive licence to download and use the extract file(s) and the data contained within for the sole purpose of non-commercial reference. Other than the use expressly permitted above you are expressly forbidden to download copy or use all or any of the extract file(s) and the data contained within for any of the following purposes:
+
+	1. use in any database and/or application for the purposes of providing, updating or maintaining any publicly available 
+	postcode look up or finder functionality;
+
+	2. to sub-license, sell, lend, rent, transfer, lease or grant any rights or use in any form or by any means all or any 
+	portion of the extract file(s) and the data contained within or make the extract file(s) and the data contained within 
+	available to any person, company,organisation, agency, or business entity without prior written permission of 	Australia Post; 
+
+	3. to modify the extract file;
+
+	4. to reverse engineer or disassemble the extract file;
+
+	5. to create derivative works based on the extract file;
+
+	6. to remove or obscure any notice of copyright, trademark or other proprietary rights;
+
+	7. to make any use of the extract file in a way which directly or indirectly causes Australia Post financial loss
+	(including, without limitation, consequential damages with existing clients and / or loss of commercial opportunities
+	with existing clients and / or potential future clients).
+
+© Copyright 2010 Australia Post
+
