@@ -9,8 +9,9 @@
 
 GetSalesRecord <- function(PostcodeId) {
 
-    tmpfilename <- paste("./tmp", as.character(PostcodeId), sep="")
-    filename <- paste("./PostcodeId", as.character(PostcodeId), ".txt", sep="")
+    tmpfilename <- paste("./data/tmp", as.character(PostcodeId), sep="")
+    filename <- paste("./data/PostcodeId", as.character(PostcodeId),
+                      ".txt", sep="")
 
     if (file.exists(tmpfilename)) file.remove(tmpfilename)
     if (file.exists(filename)) file.remove(filename)
@@ -26,7 +27,7 @@ GetSalesRecord <- function(PostcodeId) {
                s > 270
            }) {
 
-        # curl command, output directed to ./tmp
+        # curl command, output directed to ./data/tmp
         s <- paste('curl -s -H "Content-Type: multipart/form-data" -X POST \\
                    -F "locationType=Postcode" -F "state=ACT" \\
                    -F "postcodeId=', PostcodeId, '" \\
@@ -88,11 +89,11 @@ MakeDataFrame <- function(filename) {
     })
 }
 
-Sales2602 <- MakeDataFrame("./PostcodeId141.txt")
-write.table(Sales2602, "./Sales2602.csv", sep=",", row.names=F)
-Sales2617 <- MakeDataFrame("./PostcodeId261.txt")
-write.table(Sales2617, "./Sales2617.csv", sep=",", row.names=F)
-Sales2912 <- MakeDataFrame("./PostcodeId371.txt")
-write.table(Sales2912, "./Sales2912.csv", sep=",", row.names=F)
-Sales2913 <- MakeDataFrame("./PostcodeId381.txt")
-write.table(Sales2913, "./Sales2913.csv", sep=",", row.names=F)
+Sales2602 <- MakeDataFrame("./data/PostcodeId141.txt")
+write.table(Sales2602, "./data/Sales2602.csv", sep=",", row.names=F)
+Sales2617 <- MakeDataFrame("./data/PostcodeId261.txt")
+write.table(Sales2617, "./data/Sales2617.csv", sep=",", row.names=F)
+Sales2912 <- MakeDataFrame("./data/PostcodeId371.txt")
+write.table(Sales2912, "./data/Sales2912.csv", sep=",", row.names=F)
+Sales2913 <- MakeDataFrame("./data/PostcodeId381.txt")
+write.table(Sales2913, "./data/Sales2913.csv", sep=",", row.names=F)
