@@ -4,8 +4,8 @@ layout: post
 category: misc
 ---
 
-_The complete code for this post is
-[here](https://github.com/mngu2382/CanHouse/blob/master/00-PriceData.R)._
+_The complete code for this post is on
+[GitHub](https://github.com/mngu2382/CanHouse/blob/master/00-PriceData.R)._
 
 Pricing data is sourced from [domain.com.au](TODO)
 which has records of property sales dating back to 1990. The "Sales
