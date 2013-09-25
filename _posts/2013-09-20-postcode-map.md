@@ -10,13 +10,17 @@ _The complete code for this post is on
 !["Suburbs of northern Canberra"]({{ site.baseurl }}/images/postcodemap.png "Suburbs of northern Canberra")
 
 ##### R packages
-- `maptools` (which requires `sp`) is used to read the shapefiles.
-- `RColorBrewer` provides the colour palatte.
+- [`maptools`](http://cran.r-project.org/web/packages/maptools/index.html)
+  (which requires
+  [`sp`](http://cran.r-project.org/web/packages/sp/index.html))
+  is used to read the shapefiles.
+- [`RColorBrewer`](http://cran.r-project.org/web/packages/RColorBrewer/index.html)
+  provides the colour palatte.
 
 ##### Data
 - Suburb boundaries for the ACT in the form of shapefiles can be found
-  [here](http://data.gov.au/dataset/canberra-suburb-boundaries). Below
-  are the attributes available.
+  at [data.gov.au](http://data.gov.au/dataset/canberra-suburb-boundaries).
+  Below are the attributes available with the shapefiles:
 {% highlight r %}
 head(div@data)
 #   ID DIV_CODE   DIVISION DIVI DIST_CODE  DISTRICT DIST         AREA_SQM
@@ -29,9 +33,9 @@ head(div@data)
 {% endhighlight %}
 
 - Postcodes are acutally the propriety of Australia Post: a list of
-  postcode-location can be downloaded from Australia Post and used for
-  non-commercial purposes. See
-  [here](http://auspost.com.au/apps/postcode.html).
+  postcode-location can be downloaded from
+  [Australia Post](http://auspost.com.au/apps/postcode.html) and used
+  for non-commercial purposes.
 {% highlight r %}
 head(pcLoc)
 #   Pcode                       Locality State  Comments
