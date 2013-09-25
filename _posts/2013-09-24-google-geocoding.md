@@ -5,7 +5,7 @@ category: misc
 ---
 
 _The complete code for this post is on
-[GitHub](https://github.com/mngu2382/CanHouse/)._
+[GitHub](https://github.com/mngu2382/CanHouse/91-Geocoding.R)._
 
 ##### R package
 - [`rjson`](http://cran.r-project.org/web/packages/rjson/index.html)
