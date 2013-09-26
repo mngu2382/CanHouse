@@ -42,9 +42,26 @@ GetGoogleMapJSON <- function(address) {
              error=function(e) e)
 }
 
-lapply(addresses, GetGoogleMapJSON)
+GoogleMAPJSON <- lapply(addresses, GetGoogleMapJSON)
 {% endhighlight %}
 
 Note that there is a limit on the API of 2500 request per day, more
 than that and the `results` field in the JSON output is empty and the
 `status` field contains an `"OVER_QUERY_LIMIT"` value.
+
+Because of this limit, there is an exception handling step in
+`GetGoogleMapJSON` so that in the case of something like a connection
+error, we don't lose previous successful requests.
+
+Now that we have a list of geocoding data for each address extracting
+desired attributes is simple a matter of using `sapply`/`lapply`, for
+example, to extrac the latitude and longitude
+{% highlight r %}
+lat <- sapply(GoogleMapJSON,
+    function(x) tryCatch(x[[1]][[1]]$geometry$location$lat,
+                         error=function(e) NA))
+lng <- sapply(GoogleMapJSON,
+    function(x) tryCatch(x[[1]][[1]]$geometry$location$lng,
+                         error=function(e) NA))
+{% endhighlight %}
+
