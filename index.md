@@ -15,7 +15,6 @@ Of course I could have looked at the
 for more local statistics I could have also looked at the summaries
 provided on
 [domain.com.au](http://apm.domain.com.au/Research/?AddressLine=2601&LocationType=Postcode&State=ACT&PostcodeId=131).
-But the summaries from both source do leave a bit to be desired.
+But the summaries from both sources do leave a bit to be desired.
 Luckily the records of property sales on domain.com.au can be
-relatively easily accessed, giving me the opportunity to have a spot of
-fun.
+easily accessed, providing me the opportunity for a spot of fun.
