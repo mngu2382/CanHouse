@@ -22,11 +22,10 @@ where output is the output format (either `json` or `xml`) and
 parameters include required and optional values separated by an
 ampersand (`&`).
 
-The two required parameters is (1) a location value such as an `address`
+The two required parameters: (1) a location value such as an `address`;
 and (2) a `sensor` value, `true` or `false`, indicating whether or not
-the geocoding request come from a device with a location sensor.
-
-For example, for the address `West 35th, New York`, we could send the
+the geocoding request come from a device with a location sensor. For
+example, for the address "West 35th, New York", we could send the
 following request:
 
     http://maps.googleapis.com/maps/api/geocoding/json?address=west+35th+new+york&sensor=false
