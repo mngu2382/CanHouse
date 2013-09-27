@@ -4,7 +4,7 @@ title: Home
 ---
 
 Messing around with data relating to housing prices in Canberra.
-Complete code [here](https://github.com/mngu2382/CanHouse).
+Complete code on [GitHub](https://github.com/mngu2382/CanHouse).
 
 This started when some friends, in the process of making some large
 decisions, asked me to see if I could get some stats on the changes in
