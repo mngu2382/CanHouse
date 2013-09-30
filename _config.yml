@@ -4,3 +4,4 @@ baseurl: "/CanHouse"
 permalink: none
 
 # Custom variables
+title_prefix: CanHouse
