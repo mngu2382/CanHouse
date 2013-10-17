@@ -1,4 +1,6 @@
+##
 # Using Google geocoding API to get suburb and location
+##
 
 library(rjson)
 
@@ -77,5 +79,5 @@ dat_Google <- data.frame(addressGoogle, suburb, lat, lng)
 
 dat <- cbind(dat, dat_Google)
 
-write.table(dat, "Sales2602_wcoord.csv",
+write.table(dat, "./data/Sales2602_wcoord.csv",
             sep=",", quote=T, row.names=F)
