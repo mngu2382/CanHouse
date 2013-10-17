@@ -102,7 +102,7 @@ head(dat)
 # 6 -35.233724 149.161682
 {% endhighlight %}
 
-![](/images/92-GeocodingMap.png)
+!["Residental properties sold since 1991 in inner northern suburbs of Canberra"]({{ site.baseurl }}/images/92-GeocodingMap.png "Residental properties sold since 1991 in inner northern suburbs of Canberra")
 
 _R code for this map on
 [GitHub](https://github.com/mngu2382/CanHouse/blob/master/92-GeocodingMap.R)._
