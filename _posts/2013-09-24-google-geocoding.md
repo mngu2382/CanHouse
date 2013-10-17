@@ -1,5 +1,5 @@
 ---
-title: Using Google's Geocoding API
+title: Using Google's Static Maps and Geocoding API
 layout: post
 category: misc
 ---
@@ -22,10 +22,15 @@ where output is the output format (either `json` or `xml`) and
 parameters include required and optional values separated by an
 ampersand (`&`).
 
-The two required parameters: (1) a location value such as an `address`;
-and (2) a `sensor` value, `true` or `false`, indicating whether or not
-the geocoding request come from a device with a location sensor. For
-example, for the address "West 35th, New York", we could send the
+The two required parameters:
+
+1. a location value such as an `address`
+
+2. a `sensor` value, `true` or `false`, indicating whether or not the
+   geocoding request come from a device with a location sensor
+
+
+For example, for the address "West 35th, New York", we could send the
 following request:
 
     http://maps.googleapis.com/maps/api/geocoding/json?address=west+35th+new+york&sensor=false
@@ -54,7 +59,7 @@ error, we don't lose previous successful requests.
 
 Now that we have a list of geocoding data for each address extracting
 desired attributes is simple a matter of using `sapply`/`lapply`, for
-example, to extrac the latitude and longitude
+example, to extract the latitude and longitude
 {% highlight r %}
 lat <- sapply(GoogleMapJSON,
     function(x) tryCatch(x[[1]][[1]]$geometry$location$lat,
@@ -64,3 +69,40 @@ lng <- sapply(GoogleMapJSON,
                          error=function(e) NA))
 {% endhighlight %}
 
+So we now, consolidating the data into a data frame:
+{% highlight r %}
+head(dat)
+#                                        Address NrBed NrBath PropType   Price
+# 1               5 Faunce Cr ACT 2602 AUSTRALIA     4      2    House 1130000
+# 2           33 Mackennal St ACT 2602 AUSTRALIA     3      1    House  670000
+# 3           60 Clianthus St ACT 2602 AUSTRALIA     3      1    House  698000
+# 4             40 Raymond St ACT 2602 AUSTRALIA     3      1    House  730000
+# 5 22/21 Cossington Smith Cr ACT 2602 AUSTRALIA     3      1     Unit  420000
+# 6              36  Negus Cr ACT 2602 AUSTRALIA     4      2    House  770000
+#         Date status
+# 1 2013-06-15     OK
+# 2 2013-06-15     OK
+# 3 2013-06-15     OK
+# 4 2013-06-13     OK
+# 5 2013-06-11     OK
+# 6 2013-06-08     OK
+#                                                  addressGoogle   suburb
+# 1              5 Faunce Crescent, O'Connor ACT 2602, Australia O'Connor
+# 2             33 Mackennal Street, Lyneham ACT 2602, Australia  Lyneham
+# 3            60 Clianthus Street, O'Connor ACT 2602, Australia O'Connor
+# 4               40 Raymond Street, Ainslie ACT 2602, Australia  Ainslie
+# 5 22/21 Cossington Smith Crescent, Lyneham ACT 2602, Australia  Lyneham
+# 6                36 Negus Crescent, Watson ACT 2602, Australia   Watson
+#          lat        lng
+# 1 -35.266748 149.116408
+# 2 -35.247003 149.122385
+# 3 -35.251226 149.115978
+# 4 -35.255091 149.154808
+# 5 -35.241862 149.125098
+# 6 -35.233724 149.161682
+{% endhighlight %}
+
+![](/images/92-GeocodingMap.png)
+
+_R code for this map on
+[GitHub](https://github.com/mngu2382/CanHouse/blob/master/92-GeocodingMap.R)._
