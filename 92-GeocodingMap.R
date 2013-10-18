@@ -91,7 +91,7 @@ ggplot(dat, aes(pixel_x, -pixel_y)) +
     annotation_custom(map_test) +
     guides(colour=guide_legend(override.aes=list(alpha=1))) +
     theme_fullframe()
-ggsave("./figures/92-GeocodingMap.png")
+ggsave("./figures/92-GeocodingMap.png", dpi=96)
 
 ## TODO:
 ##   - find fix, so don't have to manually adjust map size;
